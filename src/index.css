@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@keyframes borderChange {
+  0% {
+    border-color: red;
+  }
+  25% {
+    border-color: blue;
+  }
+  50% {
+    border-color: green;
+  }
+  75% {
+    border-color: yellow;
+  }
+  100% {
+    border-color: red;
+  }
+}
+
+.hover\:animate-borderChange:hover {
+  animation: borderChange 2s infinite alternate;
+}
