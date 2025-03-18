@@ -12,6 +12,12 @@ function Home() {
   return (
     <section className="py-6">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
+        {isPending && (
+          <p className="text-center text-blue-500 text-xl">Loading...</p>
+        )}
+        {error && (
+          <p className="text-center text-red-500 text-xl">Error: {error}</p>
+        )}
         {data && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
             {data.products.map((product) => {
